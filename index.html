@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+    /* Body background with image */
+    body {
+        background: url('uuuuu.jpg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333; /* Dark text color */
+        font-family: 'Roboto', sans-serif;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    /* Header styles */
+    header {
+        background-color: rgba(255, 99, 71, 0.8); /* Tomato background with transparency */
+        color: #fff; /* White text color */
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideInDown 1s ease-out;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-family: 'Pacifico', cursive;
+        animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes glowText {
+        0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+        100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+    }
+
+    .nav-link {
+        color: #fff !important; /* White text color for nav links */
+        transition: color 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+        color: #ffd700 !important; /* Gold color on hover */
+    }
+
+    /* Section styles */
+    section {
+        background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Skills list styles */
+    .list-group-item {
+        background-color: #ffebcd; /* Blanched almond background */
+        color: #333; /* Dark text color */
+        border: none;
+        margin-bottom: 0.5rem;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .list-group-item:hover {
+        background-color: #ffdead; /* Navajo white background on hover */
+    }
+
+    /* Card styles */
+    .card {
+        background-color: #e6e6fa; /* Lavender background */
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-title {
+        color: #333; /* Dark text color */
+    }
+
+    .card-text {
+        color: #666; /* Medium text color */
+    }
+
+    /* Button styles */
+    .btn-dark {
+        background-color: #4682b4; /* Steel blue background */
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-dark:hover {
+        background-color: #5f9ea0; /* Cadet blue background on hover */
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: rgba(255, 99, 71, 0.8); /* Tomato background with transparency */
+        color: #fff; /* White text color */
+        padding: 1rem 0;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideInUp 1s ease-out;
+    }
+
+    @keyframes slideInUp {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .social-links a {
+        color: #fff;
+        margin: 0 10px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .social-links a:hover {
+        color: #ffd700; /* Gold color on hover */
+    }
+
+    /* Animations for user interactions */
+    body:active {
+        animation: shake 0.5s;
+    }
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-dark text-yellow text-center py-4">
+    <h1>Welcome to My Website!</h1>
+    <nav class="nav justify-content-center">
+      <a class="nav-link text-white" href="#home">Home</a>
+      <a class="nav-link text-white" href="#about">About Me</a>
+      <a class="nav-link text-white" href="#skills">Skills</a>
+      <a class="nav-link text-white" href="#projects">Projects</a>
+      <a class="nav-link text-white" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="container my-5">
+    <h2>Hi, I'm MUGANZA ASHRAPH!</h2>
+    <p>Welcome to my personal website. I'm excited to share a little about myself with you.</p>
+  </section>
+
+  <section id="about" class="container my-5">
+    <h2>About Me</h2>
+    <img src="mememe.jpg.jpg" alt="MUGANZA ASHRAPH" class="prpfile-img" width="440" height="520">
+    <p>I'm a website developer with a passion for IT. In my free time, I enjoy coding.</p>
+    <p>I'm an expert and always research in IT field.</p>
+  </section>
+
+  <section id="skills" class="container my-5">
+    <h2>Skills</h2>
+    <ul class="list-group">
+      <li class="list-group-item">WEBSITE DEVELOPER</li>
+      <li class="list-group-item">APPLICARTION DEVELOPER</li>
+      <li class="list-group-item">GAME DEVELOPER</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="container my-5">
+    <h2>Projects</h2>
+    <p>Here are some projects I've worked on:</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Google developer</h5>
+            <p class="card-text">Testing different google software.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Website building</h5>
+            <p class="card-text">Creating and building my own websites.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Application testing</h5>
+            <p class="card-text">Testing different applications before they are released to the market</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container my-5">
+    <h2>Contact Me</h2>
+    <form id="contactForm" class="mb-5" action="https://formspree.io/f/xkgjngqv" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Send</button>
+    </form>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 [MUGANZA ASHRAPH]. All rights reserved.</p>
+    <p>Email: <a href="mailto:muganzaashraph@gmail.com" class="text-white">muganzaashraph@gmail.com</a></p>
+    <div class="social-links">
+      <a href="https://x.com/ghettoflower256?t=LsFVb944xB37czZgGXn8NA&s=08" target="_blank">Twitter</a>
+      <a href="https://wa.me/qr/BOSWFODOUCK6L1" target="_blank">Whatsapp</a>
+      <a href="https://github.com/GHETTOFLOWER" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
